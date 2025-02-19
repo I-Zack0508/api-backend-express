@@ -2,6 +2,7 @@
 //const express = require('express')
 import express from 'express'
 import userRouter from './routers/userRouter.js'
+import productRouter from './routers/productRouter.js'
 
 //CRIA O OBJETO APP QUE TEM TODAS AS FUNÇÕES DO EXPRESS
 const app = express()
@@ -14,6 +15,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/user', userRouter)
+app.use('/product', productRouter)
 
 // SOBE O SERVIDOR E FICA OUVINDO AS ROTAS CRAIDAS ANTERIORMENTE
 app.listen(3000, () => {
