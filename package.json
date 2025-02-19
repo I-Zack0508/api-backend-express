@@ -1,0 +1,22 @@
+{
+  "name": "api-backend",
+  "version": "1.0.0",
+  "description": "API BACKEND exemplo aula",
+  "main": "scr/server.js",
+  "type":"module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "api",
+    "express",
+    "exemple",
+    "prisma"
+  ],
+  "author": "Isaac Ramos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
