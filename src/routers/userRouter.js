@@ -1,4 +1,10 @@
 import express from 'express'
+import createUserController from '../controllers/user/createUserControler'
+import deleteUserController from '../controllers/user/deleteUserController'
+import editNameUserController from '../controllers/user/editNameUserController'
+import getUserControlelr from '../controllers/user/getUserController'
+import updateUserController from '..//controllers/user/updateUserController'
+
 
 const router = express.Router()
 
