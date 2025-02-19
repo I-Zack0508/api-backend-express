@@ -1,6 +1,7 @@
 //IMPORTAÇÃO DO EXPRESS
 //const express = require('express')
 import express from 'express'
+import userRouter from './routers/userRouter.js'
 
 //CRIA O OBJETO APP QUE TEM TODAS AS FUNÇÕES DO EXPRESS
 const app = express()
@@ -12,41 +13,7 @@ app.get('/', (req, res) => {
     })
 })
 
-// ROTA POST 
-app.post('/', (req, res) => {
-    return res.json({
-        message: "Chamada a rota POST!",
-    })
-})
-
-// ROTA DELETE
-app.delete('/', (req, res) => {
-    return res.json({
-        message: "Chamada a rota DELETE!",
-    })
-})
-
-// ROTA PUT
-app.put('/', (req, res) => {
-    return res.json({
-        message: "Chamada a rota PUT!",
-    })
-})
-
-
-// ROTA PATCH
-app.patch('/', (req, res) => {
-    return res.json({ message: "Chamada a rota PATCH" })
-})
-
-
-app.delete('/user', (req, res) => {
-    return res.json({
-        message: "Chamado a rota DELETE no Endpoint /user"
-    })
-})
-
-
+app.use('/user', userRouter)
 
 // SOBE O SERVIDOR E FICA OUVINDO AS ROTAS CRAIDAS ANTERIORMENTE
 app.listen(3000, () => {
